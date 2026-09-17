@@ -16,6 +16,7 @@ namespace DSA_100Days.Day8.Collection_NonGeneric_ArrayList
             //1.create and print all elements
             ArrayList arrayList = new ArrayList() { 1, 2,3,4,5, "soumya", 33.4 };
 
+
             foreach (var i in arrayList)
             {
                 Console.WriteLine(i);
@@ -83,6 +84,7 @@ namespace DSA_100Days.Day8.Collection_NonGeneric_ArrayList
             int indextoremove = Convert.ToInt32(Console.ReadLine());
 
             arrayList.RemoveAt(indextoremove);
+
             foreach (var i in arrayList)
             {
                 Console.WriteLine(i);
