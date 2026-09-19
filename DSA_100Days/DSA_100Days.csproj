@@ -5,11 +5,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>DSA_100Days.Day_10.ArrayList_basic.FindMissing</StartupObject>
+    <StartupObject>DSA_100Days.Day9.CommonElementWithoutDuplicate</StartupObject>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Folder Include="Day9\" />
-  </ItemGroup>
 
 </Project>
