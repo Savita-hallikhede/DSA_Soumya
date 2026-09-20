@@ -1,0 +1,200 @@
+﻿2. Hashtable
+1. What is Hashtable?
+•	Hashtable is a non-generic collection in C#. 
+•	It stores data in Key–Value pairs. 
+•	Each value is accessed using its key, not an index. 
+•	It belongs to the System.Collections namespace.
+Example
+Key       Value
+-------------------
+101       Savita
+102       Rahul
+103       Priya
+Here:
+•	101 → Key 
+•	"Savita" → Value
+	In an ArrayList, we access elements using an index
+	In a Hashtable, we access values using a key
+	Hashtable is available inside: System.Collections
+             So write : using System.Collections;
+2. Creating a Hashtable
+Hashtable table = new Hashtable();
+This creates an empty Hashtable.
+Syntax : table.Add(key, value);
+
+3. Adding Elements
+Use Add():
+table.Add(101, "Savita");
+table.Add(102, "Rahul");
+table.Add(103, "Priya");
+4. Creating and Adding Together
+We can also initialize it directly:
+Hashtable table = new Hashtable()
+{
+    { 101, "Savita" },
+    { 102, "Rahul" },
+    { 103, "Priya" }
+};
+5. Keys Must Be Unique
+A Hashtable cannot have duplicate keys.
+Example:
+table.Add(101, "Savita");
+table.Add(101, "Rahul");
+This causes an error because 101 already exists.
+But duplicate values are allowed:
+table.Add(101, "Savita");
+table.Add(102, "Savita");
+6. Accessing a Value
+Use the key inside [ ].
+Console.WriteLine(table[101]);
+7. Updating a Value
+We can change a value using its key.
+table[101] = "Anita";
+8. Count
+To find the number of key-value pairs:
+Console.WriteLine(table.Count);
+9. Checking Whether a Key Exists
+Use:
+table.ContainsKey(101)
+It returns true or false.
+10. Checking Whether a Value Exists
+Use:
+table.ContainsValue("Savita")
+11. Clear Hashtable
+To remove everything:
+table.Clear();
+12. Loop Through Hashtable
+We can use foreach.
+foreach (DictionaryEntry item in table)
+{
+    Console.WriteLine(item.Key + " : " + item.Value);
+}
+
+DictionaryEntry is a structure (value type) used to represent one key-value pair in a Hashtable.
+13. Getting Only Keys
+We can use:
+foreach (var key in table.Keys)
+{
+    Console.WriteLine(key);
+}
+Output:
+101
+102
+103
+14. Getting Only Values
+foreach (var value in table.Values)
+{
+    Console.WriteLine(value);
+}
+Output:
+Savita
+Rahul
+Priya
+15. Hashtable Stores Objects
+Hashtable is a non-generic collection.
+Therefore, it can store different types of data.
+Example:
+Hashtable table = new Hashtable();
+
+table.Add(101, "Savita");
+table.Add(102, 25);
+table.Add(103, true);
+Here values have different types:
+101 → string
+102 → int
+103 → bool
+This is possible because Hashtable stores its elements as object.
+16. Hashtable Can Have Different Key Types
+Keys can also be different types:
+Hashtable table = new Hashtable();
+
+table.Add(101, "Savita");
+table.Add("A", "Apple");
+table.Add(10.5, "Value");
+Because Hashtable is non-generic, it works with object.
+17. Hashtable Important Methods
+Method / Property	Purpose
+Add(key, value)	Adds key-value pair
+table[key]	Gets value using key
+table[key] = value	Updates value
+Count	Number of pairs
+ContainsKey(key)	Checks key
+ContainsValue(value)	Checks value
+Remove(key)	Removes pair
+Clear()	Removes everything
+Keys	Gets all keys
+Values	Gets all values
+18. ArrayList vs Hashtable
+ArrayList	Hashtable
+Non-generic	Non-generic
+Stores elements	Stores key-value pairs
+Access using index	Access using key
+list[0]	table[101]
+No key	Has key
+list.Add(value)	table.Add(key, value)
+list.Count	table.Count
+list.Remove(value)	table.Remove(key)
+Easy memory trick:
+ArrayList
+   ↓
+Index → Value
+
+Hashtable
+   ↓
+Key → Value
+19. Advantages of Hashtable
+•	Stores data using key-value pairs. 
+•	Can quickly find a value using its key. 
+•	Keys are unique. 
+•	Can store different types because it is non-generic. 
+•	Useful for problems involving frequency, lookup, mapping, and duplicates. 
+________________________________________
+20. Limitations of Hashtable
+•	It is non-generic, so type safety is weaker. 
+•	Values/keys are stored as object. 
+•	Conversion may be required when performing calculations. 
+•	It is generally less type-safe than Dictionary<TKey,TValue>. 
+•	Ordering should not be relied upon
+21. What is a Hashing Function?
+A hashing function takes a key and converts it into a number called a hash code.
+Why do we need it?
+Instead of searching through every element one by one, hashing helps the collection quickly determine where a key's value should be located.
+22. What is a Collision?
+A collision happens when two different keys produce the same hash location/hash value.
+For example:
+Key 101 → Hash Function → 5
+Key 201 → Hash Function → 5
+Both keys want the same location:
+             ┌──→ 5
+101 ─────────┤
+             │
+201 ─────────┘
+This is called a collision.
+Simple definition
+Collision occurs when two different keys generate the same hash value or map to the same bucket/location.
+23. How is collision handled?
+The hashing collection needs a way to store both values even though they map to the same location.
+Common techniques include:
+•	Chaining 
+•	Open Addressing 
+For basic understanding, remember chaining:
+101 → hash 5 ──┐
+               ├── Location 5
+201 → hash 5 ──┘
+Both can be kept associated with the same bucket.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
