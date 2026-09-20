@@ -5,11 +5,10 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>DSA_100Days.Day9.RotateLeft</StartupObject>
+    <StartupObject>DSA_100Days.Day12.Problem1</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Day12\" />
     <Folder Include="Day13\" />
   </ItemGroup>
 

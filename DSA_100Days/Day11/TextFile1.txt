@@ -27,6 +27,7 @@ Use Add():
 table.Add(101, "Savita");
 table.Add(102, "Rahul");
 table.Add(103, "Priya");
+
 4. Creating and Adding Together
 We can also initialize it directly:
 Hashtable table = new Hashtable()
@@ -35,6 +36,7 @@ Hashtable table = new Hashtable()
     { 102, "Rahul" },
     { 103, "Priya" }
 };
+
 5. Keys Must Be Unique
 A Hashtable cannot have duplicate keys.
 Example:
@@ -44,15 +46,19 @@ This causes an error because 101 already exists.
 But duplicate values are allowed:
 table.Add(101, "Savita");
 table.Add(102, "Savita");
+
 6. Accessing a Value
 Use the key inside [ ].
 Console.WriteLine(table[101]);
+
 7. Updating a Value
 We can change a value using its key.
 table[101] = "Anita";
+
 8. Count
 To find the number of key-value pairs:
 Console.WriteLine(table.Count);
+
 9. Checking Whether a Key Exists
 Use:
 table.ContainsKey(101)
