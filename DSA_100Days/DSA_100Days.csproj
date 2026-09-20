@@ -5,11 +5,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>DSA_100Days.Day12.Problem1</StartupObject>
+    <StartupObject>DSA_100Days.Day13.Basic</StartupObject>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Folder Include="Day13\" />
-  </ItemGroup>
 
 </Project>
