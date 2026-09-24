@@ -110,14 +110,15 @@ Here values have different types:
 102 → int
 103 → bool
 This is possible because Hashtable stores its elements as object.
+
 16. Hashtable Can Have Different Key Types
 Keys can also be different types:
 Hashtable table = new Hashtable();
-
 table.Add(101, "Savita");
 table.Add("A", "Apple");
 table.Add(10.5, "Value");
 Because Hashtable is non-generic, it works with object.
+
 17. Hashtable Important Methods
 Method / Property	Purpose
 Add(key, value)	Adds key-value pair
@@ -130,15 +131,16 @@ Remove(key)	Removes pair
 Clear()	Removes everything
 Keys	Gets all keys
 Values	Gets all values
+
 18. ArrayList vs Hashtable
-ArrayList	Hashtable
-Non-generic	Non-generic
-Stores elements	Stores key-value pairs
+ArrayList	         Hashtable
+Non-generic        	Non-generic
+Stores elements	   Stores key-value pairs
 Access using index	Access using key
-list[0]	table[101]
-No key	Has key
-list.Add(value)	table.Add(key, value)
-list.Count	table.Count
+list[0]	           table[101]
+No key	           Has key
+list.Add(value)	     table.Add(key, value)
+list.Count       	table.Count
 list.Remove(value)	table.Remove(key)
 Easy memory trick:
 ArrayList
@@ -161,10 +163,13 @@ ________________________________________
 •	Conversion may be required when performing calculations. 
 •	It is generally less type-safe than Dictionary<TKey,TValue>. 
 •	Ordering should not be relied upon
+
 21. What is a Hashing Function?
 A hashing function takes a key and converts it into a number called a hash code.
+
 Why do we need it?
 Instead of searching through every element one by one, hashing helps the collection quickly determine where a key's value should be located.
+
 22. What is a Collision?
 A collision happens when two different keys produce the same hash location/hash value.
 For example:
@@ -175,9 +180,10 @@ Both keys want the same location:
 101 ─────────┤
              │
 201 ─────────┘
-This is called a collision.
+T0his is called a collision.
 Simple definition
 Collision occurs when two different keys generate the same hash value or map to the same bucket/location.
+
 23. How is collision handled?
 The hashing collection needs a way to store both values even though they map to the same location.
 Common techniques include:
@@ -187,7 +193,7 @@ For basic understanding, remember chaining:
 101 → hash 5 ──┐
                ├── Location 5
 201 → hash 5 ──┘
-Both can be kept associated with the same bucket.
+0Both can be kept associated with the same bucket.
 
 
 

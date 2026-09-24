@@ -36,14 +36,12 @@ namespace DSA_100Days.Collection_NonGeneric_Hashtable
                         ht.Add(frequency, 1);
                     }
                 }
-                
-
-                Console.WriteLine($"the frequency of {frequency} is {ht[frequency]}");
-                
-           }
+               
+            }
+            Console.WriteLine($"the frequency of {frequency} is {ht[frequency]}");
 
 
-           
+
 
         }
     }

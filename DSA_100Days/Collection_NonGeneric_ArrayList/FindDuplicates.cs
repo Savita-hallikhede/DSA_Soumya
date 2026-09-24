@@ -23,6 +23,7 @@ namespace DSA_100Days.Collection_NonGeneric_ArrayList
             {
                 int count = 0;
                 int value = Convert.ToInt32(list[i]);
+
                 for(int j=0; j<i; j++)
                 {
 

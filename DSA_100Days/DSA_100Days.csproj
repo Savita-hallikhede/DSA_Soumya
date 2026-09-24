@@ -5,7 +5,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>DSA_100Days.Day14.HashTable.CountFrequency</StartupObject>
+    <StartupObject>DSA_100Days.Collection_NonGeneric_Hashtable.GraterthenOneFrequency</StartupObject>
   </PropertyGroup>
 
 </Project>
