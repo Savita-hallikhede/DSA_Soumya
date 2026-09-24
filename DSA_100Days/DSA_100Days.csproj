@@ -5,7 +5,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>DSA_100Days.Day13.Basic</StartupObject>
+    <StartupObject>DSA_100Days.Day14.HashTable.CountFrequency</StartupObject>
   </PropertyGroup>
 
 </Project>
