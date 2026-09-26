@@ -5,7 +5,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>DSA_100Days.HasTableWithString.FrequentCharachters</StartupObject>
+    <StartupObject>DSA_100Days.HasTableWithString.DuplicateCharachter</StartupObject>
   </PropertyGroup>
 
 </Project>
